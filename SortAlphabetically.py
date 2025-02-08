@@ -41,5 +41,3 @@ def remove_spaces_punc(letter_codes):
             letter_codes.remove(i)
     return letter_codes
 
-text = 'dghsgregfvbqadffgrgfva'
-print(alpha_bubble_sort(text))
