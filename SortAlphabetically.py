@@ -4,7 +4,6 @@ def alpha_bubble_sort(text):
     length = len(letter_codes)
     flag = True
     while flag == True:
-        print(letter_codes)
         flag = False
         for i in range(0, length - 1):
             if letter_codes[i] > letter_codes[i+1]:
