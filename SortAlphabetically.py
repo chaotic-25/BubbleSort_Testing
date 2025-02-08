@@ -4,9 +4,13 @@ def alpha_bubble_sort(text):
     letter_codes = get_letter_codes(text)
     letter_codes = remove_spaces_punc(letter_codes)
     length = len(letter_codes)
-    for z in range(0, length - 1):
+    flag = True
+    while flag == True:
+        print(letter_codes)
+        flag = False
         for i in range(0, length - 1):
             if letter_codes[i] > letter_codes[i+1]:
+                flag = True
                 hold = letter_codes[i+1]
                 letter_codes[i+1] = letter_codes[i]
                 letter_codes[i] = hold
@@ -36,3 +40,6 @@ def remove_spaces_punc(letter_codes):
         if i < 97 or i > 122:
             letter_codes.remove(i)
     return letter_codes
+
+text = 'dghsgregfvbqadffgrgfva'
+print(alpha_bubble_sort(text))
