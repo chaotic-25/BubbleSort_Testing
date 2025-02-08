@@ -1,5 +1,3 @@
-#Works but not quite right
-#Doesn't stop as soon as it's sorted
 def alpha_bubble_sort(text):
     letter_codes = get_letter_codes(text)
     letter_codes = remove_spaces_punc(letter_codes)
@@ -36,8 +34,8 @@ def letter_code_to_letters(letter_codes):
 
 #Remove all non lowercase abc characters
 def remove_spaces_punc(letter_codes):
+    cleaned_letter_codes = []
     for i in letter_codes:
-        if i < 97 or i > 122:
-            letter_codes.remove(i)
-    return letter_codes
-
+        if i >= 97 and i <= 122:
+            cleaned_letter_codes.append(i)
+    return cleaned_letter_codes
